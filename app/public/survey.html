@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Survey</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+
+    <!-- Materialize Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Bree+Serif|Kanit" rel="stylesheet">
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../routing/htmlRoutes.js"></script>
+    <script src="../server.js"></script>
+    <script src="../data/friends.js"></script>
+    <script src="survey.js"></script>
+
+
+    <!-- Stylesheet
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    Reset
+    <link rel="stylesheet" href="assets/css/reset.css">  -->
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="container">
+            <h1>Survey</h1><br>
+            <h5>Name (Required)</h5>
+            <input id="userName">
+            <h5>Link to Photo (Required)</h5>
+            <input id="photoLink">
+
+            <form>
+                <h4>You tend to over-think things</h4>
+                <p>
+                    <label>
+                        <input name="question1" type="radio" value="1" />
+                        <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question1" type="radio" value="2" />
+                        <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question1" type="radio" value="3" />
+                        <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question1" type="radio" value="4" />
+                        <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question1" type="radio" value="5" />
+                        <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+
+                <h4>You are more shy than most people</h4>
+                <p>
+                    <label>
+                        <input name="question2" type="radio" value="1" />
+                        <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question2" type="radio" value="2" />
+                        <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question2" type="radio" value="3" />
+                        <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question2" type="radio" value="4" />
+                        <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question2" type="radio" value="5" />
+                        <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+
+                <h4>Making new friends is easy for you</h4>
+                <p>
+                    <label>
+                        <input name="question3" type="radio" value="1" />
+                        <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question3" type="radio" value="2" />
+                        <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question3" type="radio" value="3" />
+                        <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question3" type="radio" value="4" />
+                        <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question3" type="radio" value="5" />
+                        <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+
+                <h4>You would rather spend the majority of your time with friends instead of being alone</h4>
+                <p>
+                    <label>
+                        <input name="question4" type="radio" value="1" />
+                        <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question4" type="radio" value="2" />
+                        <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question4" type="radio" value="3" />
+                        <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question4" type="radio" value="4" />
+                        <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question4" type="radio" value="5" />
+                        <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+
+                <h4>People say you work too hard and need to relax more</h4>
+                <p>
+                    <label>
+                        <input name="question5" type="radio" value="1" />
+                        <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question5" type="radio" value="2" />
+                        <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question5" type="radio" value="3" />
+                        <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question5" type="radio" value="4" />
+                        <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question5" type="radio" value="5" />
+                        <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+
+                <h4>It doesn't bother you when people don't immediately repy to your text messages</h4>
+                <p>
+                    <label>
+                        <input name="question6" type="radio" value="1" />
+                        <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question6" type="radio" value="2" />
+                        <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question6" type="radio" value="3" />
+                        <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question6" type="radio" value="4" />
+                        <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question6" type="radio" value="5" />
+                        <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+
+                <h4>You are very independent and can take care of yourself</h4>
+                <p>
+                    <label>
+                        <input name="question7" type="radio" value="1" />
+                        <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question7" type="radio" value="2" />
+                        <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question7" type="radio" value="3" />
+                        <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question7" type="radio" value="4" />
+                        <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question7" type="radio" value="5" />
+                        <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+
+                <h4>You are naturally curious about the reality you live in</h4>
+                <p>
+                    <label>
+                        <input name="question8" type="radio" value="1" />
+                        <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question8" type="radio" value="2" />
+                        <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question8" type="radio" value="3" />
+                        <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question8" type="radio" value="4" />
+                        <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question8" type="radio" value="5" />
+                        <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+
+                <h4>You can appreciate art in all of its forms</h4>
+                <p>
+                    <label>
+                        <input name="question9" type="radio" value="1" />
+                        <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question9" type="radio" value="2" />
+                        <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question9" type="radio" value="3" />
+                        <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question9" type="radio" value="4" />
+                        <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question9" type="radio" value="5" />
+                        <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+
+                <h4>You would go out of your way to help someone, even if you don't know them well</h4>
+                <p>
+                    <label>
+                        <input name="question10" type="radio" value="1" />
+                        <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question10" type="radio" value="2" />
+                        <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question10" type="radio" value="3" />
+                        <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question10" type="radio" value="4" />
+                        <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="question10" type="radio" value="5" />
+                        <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+
+
+                <div class="col l3">
+                    <button class="z-depth-5 btn waves-effect waves-light grey lighten-0 submit" type="submit" id="submitBtn">
+                        <i class="material-icons right">send</i>Submit</button>
+                </div>
+            </form>
+
+            <div id="results" class="modal">
+                <div class="modal-content">
+                    <h4>Its a Match!</h4>
+                    <h5 id="matchName"></h5>
+                    <div id="matchPhoto"></div>
+                </div>
+                <div class="modal-footer">
+                    <a id="resultsClose" class="modal-close waves-effect waves-green btn-flat">close</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        console.log("ready!");
+
+        $("#submitBtn").on("click", handleSubmitClick);
+
+    });
+
+    function handleSubmitClick() {
+
+        var results = $("#results");
+        var name = $("#userName").val();
+        var photo = $("#photoLink").val();
+        var scores = [];
+        var questionNum = 10;
+        var data;
+
+        results.hide();
+
+        if (name == null) {
+            alert("You must enter your name!");
+            return;
+        }
+
+        if (photo == null) {
+            alert("You must enter a link to a photo!");
+            return;
+        }
+
+        for (var i = 0; i < questionNum; i++) {
+
+            var radioValue = $("input[name='question" + i + "']:checked").val();
+
+            console.log(radioValue);
+
+            if (radioValue == null) {
+                alert("please fill out All questions!");
+                return;
+            }
+            else {
+
+                scores.push(radioValue);
+
+            }
+
+        }
+
+        data = {
+            name: name,
+            photo: photo,
+            scores: scores
+        }
+
+	    	var URL = window.location.origin;
+
+            $.post(URL + "/api/friends", data, function(results){
+
+                $("#matchName").text(results.name);
+	    		$('#matchPhoto').attr("src", results.photo);
+                $('#matchPhoto').attr("height", 200);
+                
+		    	$("#resultsModal").show();
+
+    });
+}
+
+    $("#resultsClose").on("click", function () {
+        $("#results").hide();
+    });
+
+</script>
