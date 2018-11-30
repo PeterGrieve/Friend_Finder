@@ -3,8 +3,8 @@ var path = require("path");
 
 module.exports = function(app) {
 
-    var homePath = path.join(window.location.pathname, "../public/home.html");
-    var surveyPath = path.join(window.location.pathname, "../public/survey.html");
+    var homePath = path.join(__dirname, "../public/home.html");
+    var surveyPath = path.join(__dirname, "../public/survey.html");
 
     console.log(surveyPath);
 

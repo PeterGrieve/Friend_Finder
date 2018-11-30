@@ -1,7 +1,7 @@
 {
   "name": "friend_finder",
   "version": "1.0.0",
-  "description": "Allows you to find people who are compatible with you",
+  "description": "allows you to find compatible friends",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
