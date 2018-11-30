@@ -45,10 +45,22 @@
             <input id="photoLink">
 
             <form>
+                <div class="input-field col l4">
+                    <select id="question1" class="browser-default">
+                      <option  value="" disabled selected>Select an Answer</option>
+                      <option value="1">1 (Strongly Disagree)</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
                 <h4>You tend to over-think things</h4><br>
+
+
                 <div class="input-field col l4">
-                    <select class="browser-default">
-                      <option value="" disabled selected>Select an Answer</option>
+                    <select id="question2" class="browser-default">
+                      <option  value="" disabled selected>Select an Answer</option>
                       <option value="1">1 (Strongly Disagree)</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -56,11 +68,12 @@
                       <option value="5">5 (Strongly Agree)</option>
                     </select>
                 </div>
-
                 <h4>You are more shy than most people</h4><br>
+
+
                 <div class="input-field col l4">
-                    <select class="browser-default">
-                      <option value="" disabled selected>Select an Answer</option>
+                    <select id="question3" class="browser-default">
+                      <option  value="" disabled selected>Select an Answer</option>
                       <option value="1">1 (Strongly Disagree)</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -68,11 +81,12 @@
                       <option value="5">5 (Strongly Agree)</option>
                     </select>
                 </div>
-
                 <h4>Making new friends is easy for you</h4><br>
+
+
                 <div class="input-field col l4">
-                    <select class="browser-default">
-                      <option value="" disabled selected>Select an Answer</option>
+                    <select id="question4" class="browser-default">
+                      <option  value="" disabled selected>Select an Answer</option>
                       <option value="1">1 (Strongly Disagree)</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -80,11 +94,12 @@
                       <option value="5">5 (Strongly Agree)</option>
                     </select>
                 </div>
-
                 <h4>You would rather spend the majority of your time with friends instead of being alone</h4><br>
+
+
                 <div class="input-field col l4">
-                    <select class="browser-default">
-                      <option value="" disabled selected>Select an Answer</option>
+                    <select d="question5" class="browser-default">
+                      <option  value="" disabled selected>Select an Answer</option>
                       <option value="1">1 (Strongly Disagree)</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -92,11 +107,12 @@
                       <option value="5">5 (Strongly Agree)</option>
                     </select>
                 </div>
-
                 <h4>People say you work too hard and need to relax more</h4><br>
+
+
                 <div class="input-field col l4">
-                    <select class="browser-default">
-                      <option value="" disabled selected>Select an Answer</option>
+                    <select id="question6" class="browser-default">
+                      <option  value="" disabled selected>Select an Answer</option>
                       <option value="1">1 (Strongly Disagree)</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -104,11 +120,12 @@
                       <option value="5">5 (Strongly Agree)</option>
                     </select>
                 </div>
-
                 <h4>It doesn't bother you when people don't immediately repy to your text messages</h4><br>
+
+
                 <div class="input-field col l4">
-                    <select class="browser-default">
-                      <option value="" disabled selected>Select an Answer</option>
+                    <select id="question7" class="browser-default">
+                      <option  value="" disabled selected>Select an Answer</option>
                       <option value="1">1 (Strongly Disagree)</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -116,23 +133,12 @@
                       <option value="5">5 (Strongly Agree)</option>
                     </select>
                 </div>
-
                 <h4>You are very independent and can take care of yourself</h4><br>
-                <div class="input-field col l4">
-                    <select class="browser-default">
-                      <option value="" disabled selected>Select an Answer</option>
-                      <option value="1">1 (Strongly Disagree)</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5 (Strongly Agree)</option>
-                    </select>
-                </div>
 
-                <h4>You would go out of your way to help someone, even if you don't know them well</h4><br>
+
                 <div class="input-field col l4">
-                    <select class="browser-default">
-                      <option value="" disabled selected>Select an Answer</option>
+                    <select id="question8" class="browser-default">
+                      <option  value="" disabled selected>Select an Answer</option>
                       <option value="1">1 (Strongly Disagree)</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -140,6 +146,8 @@
                       <option value="5">5 (Strongly Agree)</option>
                     </select>
                 </div>
+                <h4>You would go out of your way to help someone, even if you don't know them well</h4><br>
+
                 <div class="col l3">
                     <button class="z-depth-5 btn waves-effect waves-light grey lighten-0 submit" type="submit" id="submitBtn">
                         <i class="material-icons right">send</i>Submit</button>
@@ -163,17 +171,8 @@
 
 <script type="text/javascript">
 
-    var scores;
-
     $(document).ready(function () {
-        
-        $('select').formSelect();
-         var instance = M.FormSelect.getInstance(elem);
-
-         scores = instance.getSelectedValues();
-
-        console.log(scores);
-        
+              
         $("#submitBtn").on("click", handleSubmitClick);
 
     });
@@ -183,8 +182,10 @@
         var results = $("#results");
         var name = $("#userName").val();
         var photo = $("#photoLink").val();
-        var questionNum = 10;
+        var questionNum = 8;
         var data;
+        var scores;
+        var j = 0;
 
         results.hide();
 
@@ -198,11 +199,19 @@
             return;
         }
 
-        for (var i = 0; i < questionNum; i++) {
+        for (var i = 1; i < questionNum; i++) {
 
-            if (scores[i] == null) {
+            if ($("#question" + i).val() == null) {
+                console.log($("#question" + i).val());
                 alert("please fill out All questions!");
                 return;
+            }
+            else{
+
+                scores[j] = $("#question" + i).val();
+
+                j++;
+  
             }
         }
 
